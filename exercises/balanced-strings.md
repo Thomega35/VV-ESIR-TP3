@@ -61,9 +61,9 @@ With the current test already coverring this test cases.
 
 4.
 
-First of all, we needed to find a way to launch Pit, for that I decided to use Intellij extension.
+First of all, we needed to find a way to launch Pit, for that we decided to use Intellij extension.
 
-As you can see on the image the mutation score is 87%. It rests 3 mutantes alives :
+As you can see on the image the mutation score is 87%. It remains 3 mutantes alives :
 
 ![image info](./images/pit_res.png)
 

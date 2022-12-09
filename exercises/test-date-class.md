@@ -91,17 +91,17 @@ The characteristic are the different type of years:
 
 ```
 
-Year                                            True            False
+Year                                            
 
 year%4 != 0                                     True            False
 
 year%4 == 0 and year%100 != 0                   True            False
 
-year%4 == 0 and year%100 != 0 and year%400      True            False
+year%4 == 0 and year%100 == 0 and year%400      True            False
 
 ```
 
-There is 8 blocks identified.
+There is 6 blocks identified.
 
 
 - nextDate method :
@@ -156,3 +156,31 @@ The characteristics are the different the month, the day and the year :
 We can not represent the tab here because it would need to do it in 3 dimensions (year, month, day) :
 
 Despite that we can say, by reasoning, that the number of blocks is 2^3 = 8.
+
+2. 
+
+- IsValideDate : 8/18 = 0.44
+
+- IsLeapYear : 6 / 6 = 1
+
+- testNextDate : 4 / 35 = 0.11
+
+- testPreviousDate : 3 / 4 = 0.75
+
+- compareTo : 6 / 8 = 0.75
+
+3. 
+
+With statement coverage equals (cf above) to 100%, no predicate with more than two boolean operator are not tested
+
+4.
+
+As previous we decided to use Intellij extension.
+
+The mutation score is 70%. It remains 35 mutantes alives :
+
+![image info](./images/pit_2.png)
+
+---
+
+The tests could have been more exaustive if we have more time. And it could have been better with more time.

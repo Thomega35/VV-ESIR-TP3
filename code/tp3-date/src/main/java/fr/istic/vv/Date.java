@@ -8,7 +8,22 @@ class Date implements Comparable<Date> {
 
     public Date(int day, int month, int year) { 
         if (!isValidDate(day, month, year)) throw new IllegalArgumentException("Invalid date");
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
+
+    public int getDay() { 
+        return day;
+     }
+
+    public int getMonth() { 
+        return month;
+     }
+
+    public int getYear() { 
+        return year;
+     }
 
     public static boolean isValidDate(int day, int month, int year) { 
 
@@ -16,7 +31,7 @@ class Date implements Comparable<Date> {
         if(day < 1) return false;
 
         if(month == 2){
-            if(isLeapYear(year) && day > 28) return false;
+            if(!isLeapYear(year) && day > 28) return false;
             else if(isLeapYear(year) && day > 29) return false;
         }
 
